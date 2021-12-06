@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.layout{
+  width: 100vw;
+  height: 100vh;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.card-title{
+height: 64px;
+}
+
+.card-click {
+  text-decoration: none;
+}
+
+.card-hover :hover{
+  background:#d0e1e6;
+}
+
+.MuiLink-underlineHover {
+  text-decoration: none !important;
+}
+
+.publisher-container {
+  width: 100vw !important;
+  height: 100vh;
+  background: linear-gradient(
+    180deg, #40E0D0, #c4f0eb);;
+}
+
+.divider {
+  border-bottom : 1px solid #d3caca;
+  margin: 5px 0 10px 0
+}
+
+.MuiGrid-spacing-xs-3 {
+  margin: 0px !important
+}
+
+.publisher-header{
+  width: 100vw;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-header{
+border-radius: 3px;
+background: #5e6ad1;
+margin-bottom: 10px;
+}
+.cursor{
+  cursor: pointer;
+}
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
+  border-color: #23a981 !important;
+  border-width: 3px !important;
+}
