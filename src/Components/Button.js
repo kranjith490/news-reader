@@ -14,6 +14,7 @@ const CustomeButton = ({ publisher }) => {
       id={publisher}
       variant="contained"
       color="primary"
+      className="full-width"
       onClick={handleNavigation}
     >
       {publisher}

@@ -94,7 +94,6 @@ margin-bottom: 10px;
   cursor: pointer;
 }
 .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline{
-  border-color: #23a981 !important;
   border-width: 3px !important;
 }
 
@@ -105,4 +104,12 @@ margin-bottom: 10px;
 .back-button {
   cursor: pointer;
   padding-top: 35px;
+}
+
+.full-width{
+  width: 100%
+}
+
+.remove-default-width{
+  width:0 !important
 }

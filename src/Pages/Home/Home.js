@@ -12,13 +12,7 @@ import { fetchNewData } from "../../Redux/Action";
   }, []);
 
   return (
-    <Grid
-      container
-      alignItems="center"
-      justify="center"
-      spacing={3}
-      className="layout align-center"
-    >
+    <Grid container spacing={4} className="layout align-center">
       <Grid item xs={12} className="publisher-header home-header">
         Publisher List
       </Grid>
