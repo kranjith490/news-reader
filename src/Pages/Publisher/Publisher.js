@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { Grid, Typography, Link } from "@material-ui/core";
+import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
+import Icon from "@material-ui/core/Icon";
 import NewsCard from "../../Components/newsCard";
 import Search from "../../Components/Search";
 import { sortDate } from "../../utils/sortDate";
@@ -18,16 +20,18 @@ const Publisher = () => {
 
   useEffect(() => {
     let data = [];
-    data = { ...newsData[PublisherName] };
-    console.log("Selected News", data);
-    data = sortDate(Object.values(data));
-    data = formatDate(data);
-    setPublisherNews(data);
-    console.log("After Conversion", data);
+    if (newsData[PublisherName]) {
+      data = { ...newsData[PublisherName] };
+      data = sortDate(Object.values(data));
+      data = formatDate(data);
+      setPublisherNews(data);
+    } else {
+      handleRedirect();
+    }
   }, []);
 
-  const handleReload = () => {
-    navigate("/");
+  const handleRedirect = () => {
+    navigate("/home");
   };
 
   const handleSearch = (value) => {
@@ -51,10 +55,18 @@ const Publisher = () => {
       spacing="3"
       className="publisher-container"
     >
-      <Grid item xs={12} className="align-center">
+      <Grid item xs={3} className="header-border">
+        <Icon onClick={handleRedirect}>
+          <KeyboardBackspaceIcon className="back-button" />
+        </Icon>
+      </Grid>
+      <Grid item xs={6} className=" header-border">
         <Typography variant="h5" className="publisher-header">
           News from {PublisherName}
         </Typography>
+      </Grid>
+      <Grid item xs={3} className="header-border"></Grid>
+      <Grid item xs={12} className="align-center">
         <Search handleSearch={handleSearch} />
       </Grid>
       {JSON.stringify(publisherNews) !== "{}" ? (
@@ -72,7 +84,7 @@ const Publisher = () => {
       ) : (
         <Typography>
           Oops, No News Avaialble.Click{" "}
-          <Link onClick={handleReload} className="cursor">
+          <Link onClick={handleRedirect} className="cursor">
             home
           </Link>{" "}
           to publish
