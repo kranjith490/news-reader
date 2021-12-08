@@ -36,10 +36,8 @@ const Publisher = () => {
 
   const handleSearch = (value) => {
     if (value.length == 0) {
-      console.log("IF Search Key", value, originalData);
       setPublisherNews(originalData);
     } else {
-      console.log("ELSE Search Key", value);
       const result = filterSearch(originalData, value);
       result.length !== 0
         ? setPublisherNews(result)

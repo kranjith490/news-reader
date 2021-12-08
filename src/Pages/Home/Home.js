@@ -3,8 +3,7 @@ import { Grid } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import CustomeButton from "../../Components/Button";
 import { fetchNewData } from "../../Redux/Action";
-/* import loader from "../../assets/loader.gif";
- */ const Home = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const { newsData } = useSelector((state) => state.newsReducer);
   useEffect(() => {
