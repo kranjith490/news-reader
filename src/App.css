@@ -85,7 +85,8 @@ height: 64px;
 .home-header{
 border-radius: 3px;
 background: #5e6ad1;
-margin-bottom: 10px;
+margin: 10px 0 10px 0 !important;
+
 }
 .cursor{
   cursor: pointer;
