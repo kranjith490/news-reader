@@ -1,0 +1,4 @@
+deployed_url = http://publicnews.herokuapp.com/home
+
+Please try to load it once again if it fails, because facing issues while deloying app with routing.
+But Will works fine in loacal.
